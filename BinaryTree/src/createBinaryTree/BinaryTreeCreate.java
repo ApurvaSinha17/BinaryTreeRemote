@@ -85,6 +85,7 @@ public class BinaryTreeCreate {
 	 * 			2						5		
 	 * 	3				4			6		7	
 	 * 		8
+	 * 9
 	 */
 	public static BinaryTreeNode createCompleteBinaryTree(){
 		
@@ -97,7 +98,11 @@ public class BinaryTreeCreate {
 			prev = node;
 			node = node.getLeftNode();
 		}
-		prev.setRightNode(l4);	
+		prev.setRightNode(l4);
+		
+		BinaryTreeNode l5 = new BinaryTreeNode();
+		l5.setData(9);
+		l4.setLeftNode(l5);
 		
 		return rootNode;
 	}
